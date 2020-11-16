@@ -19,6 +19,10 @@ mongoose.connection.on('connected', () => {
     console.log('Mongoose is connected.')
 })
 
+//Data Parsing
+app.use(express.json())
+app.use(express.urlencoded({ extended: false }))
+
 //http request logger
 app.use(morgan('tiny'))
 
